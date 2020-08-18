@@ -6,6 +6,7 @@ using System.IO;
 
 namespace test1
 {
+  // 代码取自：https://docs.microsoft.com/zh-cn/dotnet/csharp/tutorials/console-teleprompter
   class Program
   {
     static void Main(string[] args){
