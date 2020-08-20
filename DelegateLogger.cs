@@ -3,6 +3,7 @@ using System.IO;
 using System.Reflection;
 
 namespace test1{
+  // 代码源自：https://docs.microsoft.com/zh-cn/dotnet/csharp/delegates-patterns
   public class DelegateLogger{
   
     static void Main(string[] args){
