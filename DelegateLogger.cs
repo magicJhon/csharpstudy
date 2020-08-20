@@ -62,7 +62,7 @@ namespace test1{
         return ;
       }
       string output = $"{DateTime.Now}\t{s}\t{component}\t{msg}";
-      WriteMessage.Invoke(output);
+      WriteMessage?.Invoke(output);
       // or 
       // WriteMessage(output);
     }
