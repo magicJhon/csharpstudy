@@ -49,6 +49,9 @@ namespace test1{
   }
   
   public class Logger{
+    // 代理 Action<string> 表明 Action需要一个string类型的输入参数；返回是void。
+    // 若有输入和输出参数，需要通过in 和 out 区分。
+    // 例泛型代理声明： public delegate TResult Func<in T1, out TResult>(T1 arg); 中 T1 为输入参数； TResult 为返回值的类型
     public static Action<string> WriteMessage;
     
     public static Severity LogLevel { get; set; } = Severity.Warning;
