@@ -3,6 +3,8 @@ using System.Collection.Generic;
 using System.Linq;
 
 namespace test1{
+    
+    //代码源自：https://docs.microsoft.com/zh-cn/dotnet/csharp/linq/linq-in-csharp
     public class LinqForListSample{
         static void Main(string[] args){
             List<StudentScore> scores = new List<StudentScore>(){
