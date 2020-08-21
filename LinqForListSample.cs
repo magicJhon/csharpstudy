@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace test1{
     
-    //代码源自：https://docs.microsoft.com/zh-cn/dotnet/csharp/linq/linq-in-csharp
+    //代码源自：https://docs.microsoft.com/zh-cn/dotnet/csharp/linq/query-expression-basics
     public class LinqForListSample{
         static void Main(string[] args){
             List<StudentScore> scores = new List<StudentScore>(){
@@ -71,7 +71,7 @@ namespace test1{
                         })
                     let percentile = (int) newscore.Mark / 10   //赋值
                     group newscore by percentile into scoreGroup    //分组；并以percentile为Key，保存符合条件的分组到scoreGroup中
-                    // where scoreGroup.Key >= 6    // 60分以上的
+                    // where scoreGroup.Key >= 6    // 60分以上的；  where 条件通过  && || 连接
                     order by scoreGroup.Key descending
                     select scoreGroup;
             Console.WriteLine(" Let & Join & Groupby Query:");
