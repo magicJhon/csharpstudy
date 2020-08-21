@@ -64,7 +64,7 @@ namespace test1{
             
             var scoreQuery1 = 
                     from newscore in ( from score in scoresOnly
-                        join student in students on score.StudentID equals student.ID   //连表
+                        join student in students on score.StudentID equals student.ID   //连表  联合主键用形如：on new { employee.FirstName, employee.LastName } equals new { student.FirstName, student.LastName }
                         join subject in subjects on score.SubjectID equals subject.ID   //连表
                         select new { StudentID = score.StudentID, StudentName = student.Name    //封装数据返回
                         , SubjectID = score.SubjectID, SubjectName = subject.Name, Mark = score.Mark
