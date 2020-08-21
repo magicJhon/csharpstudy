@@ -70,7 +70,7 @@ namespace test1{
                         , SubjectID = score.SubjectID, SubjectName = subject.Name, Mark = score.Mark
                         })
                     let percentile = (int) newscore.Mark / 10   //赋值
-                    group newscore by percentile into scoreGroup    //分组；并以percentile为Key，保存符合条件的分组到scoreGroup中
+                    group newscore by percentile into scoreGroup    //分组；并以percentile为Key，保存符合条件的分组到scoreGroup中  // IEnumerable<IGrouping<int, Score>>
                     // where scoreGroup.Key >= 6    // 60分以上的；  where 条件通过  && || 连接
                     order by scoreGroup.Key descending
                     select scoreGroup;
@@ -87,7 +87,7 @@ namespace test1{
             var scoreQuery2 = 
                 from score in scoresOnly
                 let percentile = (int) score.Mark / 10
-                group score by percentile into socreGroup
+                group score by percentile into socreGroup  // IEnumerable<IGrouping<int, Score>>
                 select new { 
                     Level = scoreGroup.Key,
                     HighestScore = ( from score2 in scoreGroup 
