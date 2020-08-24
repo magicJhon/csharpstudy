@@ -7,6 +7,10 @@ using System.IO;
 namespace test1
 {
   // 代码取自：https://docs.microsoft.com/zh-cn/dotnet/csharp/tutorials/console-teleprompter
+  /*
+  对于 I/O 绑定代码，等待一个在 async 方法中返回 Task 或 Task<T> 的操作。
+对于 CPU 绑定代码，等待一个使用 Task.Run 方法在后台线程启动的操作。
+  */
   class Program
   {
     static void Main(string[] args){
